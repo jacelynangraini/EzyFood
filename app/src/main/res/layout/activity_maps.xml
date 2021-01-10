@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swiperefresh_items"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:onClick="onMapClicked"
+        tools:context=".MapsActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:background="@color/gold"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Location "
+                android:textColor="@color/textColorBrown"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/ezyLoc"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/roundedwhite"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:background="@android:color/transparent"
+                    android:dropDownWidth="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/deliveryLoc"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundedwhite"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fadeScrollbars="true"
+                    android:fontFamily="@font/lato"
+                    android:isScrollContainer="true"
+                    android:maxHeight="50dp"
+                    android:padding="10dp"
+                    android:text="@string/refreshLoc"
+                    android:textColor="@color/textColorLightBrown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                tools:context=".MapsActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/rounded_border_yellow"
+                android:fontFamily="@font/lato"
+                android:onClick="onMapClicked"
+                android:text="📍 "
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/chooseNearest"
+                android:textColor="@color/textColorLightBrown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+            tools:layout_editor_absoluteX="186dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="@string/deliveredFrom"
+                android:textColor="@color/textColorLightBrown"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="chosen location"
+                android:textColor="@color/textColorBrown"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ConfirmLocBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_gold"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:onClick="onConfirmLocClicked"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

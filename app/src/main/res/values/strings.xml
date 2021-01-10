@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">EzyFood</string>
+    <string name="food">Food</string>
+    <string name="snacks">Snacks</string>
+    <string name="drinks">Drinks</string>
+    <string name="topup">Top Up</string>
+
+    <string name="details">Details</string>
+    <string name="order">Order</string>
+    <string name="confirm">Confirm</string>
+    <string name="qty">Quantity:</string>
+    <string name="paymentLabel">Payment Details</string>
+    <string name="orderMore">Order More</string>
+    <string name="border">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
+    <string name="done">Thank you for ordering 👍😊!\nPlease wait while your order is being processed.</string>
+
+    <string name="orderConfirmed">Order Confirmed</string>
+    <string name="checkoutBtn">Checkout →</string>
+    <string name="topupBtn">← Top Up</string>
+
+    <string name="myOrder">My Order</string>
+    <string name="total">Total</string>
+
+    <string name="refreshLoc">Allow EzyFood to access location and scroll to refresh the page!</string>
+
+    <string name="deliveryLoc">Delivery Location</string>
+
+    <string name="topupAmount">Input amount \n(Rp10.000 - Rp2.000.000): </string>
+    <string name="chooseNearest">Choose EzyFood nearest me!</string>
+    <string name="deliveredFrom">Your food will be delivered from...</string>
+    <string name="ezyLoc">EzyFood location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

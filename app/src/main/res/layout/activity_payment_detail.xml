@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".PaymentDetail">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main" />
+
+        <TextView
+            android:id="@+id/orderConfirmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="@string/orderConfirmed"
+            android:textColor="@color/textColorBrown"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <ListView
+            android:id="@+id/list_orders"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_margin="10dp"
+            android:divider="@color/textColorYellow"
+            android:dividerHeight="0dp"
+            android:maxHeight="500dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderConfirmed">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/borderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_orders" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/borderView">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato"
+                android:gravity="end"
+                android:paddingEnd="10dp"
+                android:shadowColor="#FFFFFF"
+                android:text="@string/total"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato"
+                android:gravity="end"
+                android:text="Rp"
+                android:textColor="@color/textColorBrown"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato"
+                android:paddingStart="10dp"
+                android:shadowColor="@color/colorAccent"
+                android:text="TextView"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:shadowColor="#FFFFFF"
+            android:text="@string/done"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_gold"
+            android:foregroundGravity="center"
+            android:onClick="onOK"
+            android:text="Ok ! "
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/orderDatee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center|center_horizontal"
+            android:paddingTop="10dp"
+            android:text="order date"
+            android:textColor="@color/textColorLightBrown"
+            app:layout_constraintBottom_toTopOf="@+id/list_orders"
+            app:layout_constraintTop_toBottomOf="@+id/orderConfirmed"
+            tools:layout_editor_absoluteX="182dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

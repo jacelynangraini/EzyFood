@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".DrinksMenuDetails">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FCFCFC" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/orderImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/drink" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/textColorBrown"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="Rp"
+                android:textColor="@color/textColorBrown"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/orderConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/textColorBrown"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/itemStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Stock"
+            android:textColor="@color/textColorLightBrown" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="110dp"
+                android:layout_weight="1"
+                android:onClick="onLess"
+                app:srcCompat="@drawable/icon_minus" />
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="1"
+                android:textColor="@color/textColorBrown" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="110dp"
+                android:layout_weight="1"
+                android:onClick="onMore"
+                app:srcCompat="@drawable/icon_plus" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmBtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_gold"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:onClick="onOrderBtnClicked"
+            android:text="Add to cart"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
